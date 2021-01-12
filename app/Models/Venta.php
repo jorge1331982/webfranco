@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Venta extends Model
 {
     use HasFactory;
-    protected $fillable =['fecha','Oservicio','Cliente','Tipo_Producto','tipo_servicio','tipo_unidad','vendedor','precio','comentarios','user_id'];
+    protected $fillable =['fecha','Oservicio','Cliente','Tipo_Producto','tipo_servicio','tipo_unidad','vendedor','precio','comentarios','user_id','fechaentrega'];
     public function producciones(){
         return $this->hasMany(Produccion::class);
     }

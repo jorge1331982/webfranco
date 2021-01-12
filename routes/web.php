@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AlmacenController;
 use App\Http\Controllers\ChatController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UsersController;
@@ -46,8 +47,8 @@ Route::get('/seguimiento', function () {
 })->name('seguimiento');
 
 //rutas de venta con controlador
-Route::get('/notifica',[VentaController::class,'ref'])->name('ref');
-Route::post('/notifica',[VentaController::class,'end'])->name('end');
+Route::get('/notifica',[VentaController::class,'ref'])->name('ref')->middleware('permission:venta.index');
+Route::post('/notifica',[VentaController::class,'end'])->name('end')->middleware('permission:venta.create');
 //ruta de 1.5 tons
  Route::get('/cotizacion',[ AdminController::class,'cotizacion'])->name('cotiza');
  Route::post('/cotizacion',[ AdminController::class,'cotizaform'])->name('salida');
@@ -79,7 +80,20 @@ Route::get('/salidas', function () {
 //RUTAS ALMACEN
 Route::get('/almacen', function () {
     return view('almacen.registro');
-})->name('prod')->middleware('permission:almacen.index');
+})->name('salidas')->middleware('permission:almacen.index');
+
+Route::get('/inventario', function () {
+    return view('almacen.inventario');
+})->name('salidas')->middleware('permission:almacen.index');
+
+Route::get('/entradas', function () {
+    return view('almacen.entradas');
+})->name('entradas')->middleware('permission:almacen.index');
+
+//compras
+Route::get('/compras', function () {
+    return view('administracion.compras');
+})->name('entradas')->middleware('permission:compras.index');
 
 
 //ruta de la tarjeta de notificaciones

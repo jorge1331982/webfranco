@@ -52,10 +52,18 @@ class UserTableSeeder extends Seeder
          //super-admin user
          $super=User::create([
             'name'=>'super-admin',
-            'email'=>'super-admin@gmail.com',
+            'email'=>'jorge@gmail.com',
             'password'=>bcrypt('david133'),
 
         ]);
          $super->assignRole('super-admin');
+
+         $super=User::create([
+            'name'=>'oficinas',
+            'email'=>'oficinas@gmail.com',
+            'password'=>bcrypt('david133'),
+
+        ]);
+         $super->assignRole('oficinas');
     }
 }

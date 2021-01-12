@@ -1,7 +1,21 @@
 
 <div class="container">
+<!-- Flexbox container for aligning the toasts -->
+           @if (session('message')=='ok'){
+               <script>
+                  Swal.fire({
+                  position: 'top-end',
+                  icon: 'info',
+                  title: 'Datos Guardados Correctamente !!!',
+                  showConfirmButton: false,
+                  timer: 2500
+                    })
+               </script>
+           }
 
-        <form wire:submit.prevent="ingreso">
+           @endif
+
+        <form wire:submit.prevent="ingreso" class="formulario-contacto">
         <div class="form-row">
       <div class="form-group col-md-4">
         <input type="text" class="form-control" placeholder="Numero Cotizacion  (crear uno)" wire:model="cotizacion" required>
@@ -39,14 +53,7 @@
       </div>
 
       <div class="form-group col-md-4">
-        <select wire:model="tipo_unidad" class="form-control" required>
-          <option selected>Tipo Unidad</option>
-          <option>3.5 tons</option>
-          <option>1.5 TONS</option>
-          <option>CAMION</option>
-          <option>REMOLQUE</option>
-
-        </select>
+       <input type="text" placeholder="tipo de Unidad" required wire:model="tipo_unidad" class="form-control">
       </div>
 
       <div class="form-group col-md-4">
@@ -74,6 +81,7 @@
           <option>Juan Carlos Villicaña</option>
           <option>Monserrat Villicaña</option>
           <option>Miguel Franco</option>
+          <option>Monserrath  Mohedano</option>
         </select>
       </div>
 
@@ -89,8 +97,9 @@
 
       <select  class="form-control" wire:model="productos" required>
           <option selected>Productos</option>
-          <option>Caja Seca</option>
-          <option>Redilla</option>
+           <option>Caja Seca con Copete</option>
+           <option>Caja Seca Cuadrada</option>
+          <option>Redila</option>
           <option>Carroceria</option>
           <option>Pipa</option>
           <option>Volteo</option>
@@ -101,15 +110,22 @@
           <option>Refrigerado</option>
           <option>Gruas</option>
           <option>Conversiones</option>
+          <option>Caja Refrigerada</option>
+          <option>plataforma tipo L</option>
+          <option>Plataforma Materialista</option>
+          <option>Remolque</option>
+
         </select>
       </div>
 
       <div  class="d-flex justify-content-center">
-       <button class="btn btn-primary btn-block mt-3 " type="submit"><svg  id="Capa_1" enable-background="new 0 0 512 512" height="30" viewBox="0 0 512 512" width="30" xmlns="http://www.w3.org/2000/svg"><g><path d="m256 0c-140.7 0-256 115.3-256 256s115.3 256 256 256 256-115.3 256-256-115.3-256-256-256z" fill="#f3f5f9"/><path d="m512 256c0 140.7-115.3 256-256 256v-512c140.7 0 256 115.3 256 256z" fill="#e1e6f0"/><circle cx="256" cy="256" fill="#a0e65c" r="226"/><path d="m482 256c0 124.2-101.8 226-226 226v-452c124.2 0 226 101.8 226 226z" fill="#79cc52"/><path d="m372.675 196.747-42.437-42.422c-5.859-5.859-15.352-5.859-21.211 0l-53.027 53.037-30 30.005-23.042-23.042c-5.859-5.859-15.352-5.859-21.211 0l-42.422 42.422c-5.859 5.859-5.859 15.352 0 21.211l76.069 76.069c2.93 2.93 6.768 4.395 10.605 4.395s7.676-1.465 10.605-4.395l19.396-19.394 116.675-116.675c2.813-2.813 4.395-6.621 4.395-10.605s-1.583-7.793-4.395-10.606z" fill="#f3f5f9"/><path d="m377.069 207.353c0-3.984-1.582-7.793-4.395-10.605l-42.437-42.422c-5.859-5.859-15.352-5.859-21.211 0l-53.026 53.036v127.271l116.675-116.675c2.812-2.812 4.394-6.621 4.394-10.605z" fill="#e1e6f0"/></g></svg>Guardar</button>
+       <button class="btn btn-primary btn-block mt-3 mb-5 " type="submit"><svg  id="Capa_1" enable-background="new 0 0 512 512" height="30" viewBox="0 0 512 512" width="30" xmlns="http://www.w3.org/2000/svg"><g><path d="m256 0c-140.7 0-256 115.3-256 256s115.3 256 256 256 256-115.3 256-256-115.3-256-256-256z" fill="#f3f5f9"/><path d="m512 256c0 140.7-115.3 256-256 256v-512c140.7 0 256 115.3 256 256z" fill="#e1e6f0"/><circle cx="256" cy="256" fill="#a0e65c" r="226"/><path d="m482 256c0 124.2-101.8 226-226 226v-452c124.2 0 226 101.8 226 226z" fill="#79cc52"/><path d="m372.675 196.747-42.437-42.422c-5.859-5.859-15.352-5.859-21.211 0l-53.027 53.037-30 30.005-23.042-23.042c-5.859-5.859-15.352-5.859-21.211 0l-42.422 42.422c-5.859 5.859-5.859 15.352 0 21.211l76.069 76.069c2.93 2.93 6.768 4.395 10.605 4.395s7.676-1.465 10.605-4.395l19.396-19.394 116.675-116.675c2.813-2.813 4.395-6.621 4.395-10.605s-1.583-7.793-4.395-10.606z" fill="#f3f5f9"/><path d="m377.069 207.353c0-3.984-1.582-7.793-4.395-10.605l-42.437-42.422c-5.859-5.859-15.352-5.859-21.211 0l-53.026 53.036v127.271l116.675-116.675c2.812-2.812 4.394-6.621 4.394-10.605z" fill="#e1e6f0"/></g></svg>Guardar</button>
       </div>
 
 
         </form>
+
+
 
   </div>
   @include('livewire.table')

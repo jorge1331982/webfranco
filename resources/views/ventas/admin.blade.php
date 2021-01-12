@@ -27,8 +27,6 @@
 
    <link rel="preconnect" href="https://fonts.gstatic.com">
    <link href="https://fonts.googleapis.com/css2?family=Langar&display=swap" rel="stylesheet">
-   <link href="https://cdn.datatables.net/buttons/1.6.4/css/buttons.dataTables.min.css">
-   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
 
    <style>
        h1,body{
@@ -42,50 +40,22 @@
 
 @section('js')
 <script>
-    $(document).ready(function() {
-    $('#tabla33').DataTable( {
-        responsive: true,
-        dom: 'lBftipr',
-        buttons: [
-            {
-              extend:'excelHtml5',
-              text:'<i class="fas fa-file-excel"></i>',
-              className:"btn btn-success",
-              titleAttr:' exportar a excel'
-            },
-            {
-              extend:'pdfHtml5',
-              text:'<i class="fas fa-file-pdf"></i>',
-              className:"btn btn-danger",
-              titleAttr:' exportar a pdf'
-            },
-            {
-              extend:'print',
-              text:'<i class="fas fa-print"></i>',
-              className:"btn btn-info",
-              titleAttr:'imprimir',
-            },
-            {
-              extend:'csv',
-              text:'<i class="fas fa-file-excel"></i>',
-              className:"btn btn-primary",
-              titleAttr:'exportar a csv',
-            }
 
-        ]
-    } );
-} );
-
+    $('#table299').DataTable();
 
  </script>
 
-   <script src="https://cdn.datatables.net/buttons/1.6.4/js/dataTables.buttons.min.js"></script>
-   <script src="https://cdn.datatables.net/buttons/1.6.4/js/buttons.flash.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
-   <script src="https://cdn.datatables.net/buttons/1.6.4/js/buttons.html5.min.js"></script>
-   <script src="https://cdn.datatables.net/buttons/1.6.4/js/buttons.print.min.js"></script>
+<script>
+    $('.formulario-contacto').submit(function(e){
+         e.preventDefault();
+});
+
+
+
+
+</script>
+
+
 
 
 

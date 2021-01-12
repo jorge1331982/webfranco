@@ -19,13 +19,13 @@
 
 </div>
 
-
-<!-- Generator: Adobe Illustrator 24.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<img src="{{asset('img/portada.svg')}}" alt="">
-
+<div class="d-flex justify-content-center">
+  <img src="{{asset('img/portada.svg')}}" alt=""width="680px" height="680px">
+</div>
 @stop
 
 @section('content')
+
 
 
 
@@ -57,7 +57,6 @@
 @stop
 
 @section('js')
-
 
 
 

@@ -29,6 +29,7 @@ class CreateProduccionsTable extends Migration
             $table->foreign('venta_id')->references('id')->on('ventas');
 
 
+
             $table->timestamps();
         });
     }

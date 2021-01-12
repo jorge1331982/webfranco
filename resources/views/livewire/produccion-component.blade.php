@@ -1,17 +1,20 @@
 <div class="container">
 
 
-
-    @if(session('message')=='Datos Guardados Correctamente')
+    @if (session('message')=='ok'){
         <script>
-          Swal.fire({
-         icon: 'success',
-         title: '!!Exito!!',
-         text: 'Datos Guardados Correctamente',
-
-        });
+           Swal.fire({
+           position: 'top-end',
+           icon: 'info',
+           title: 'Datos Guardados Correctamente !!!',
+           showConfirmButton: false,
+           timer: 2000
+             })
         </script>
-     @endif
+    }
+
+    @endif
+
 
 
     <form wire:submit.prevent="derek">

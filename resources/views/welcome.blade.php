@@ -12,6 +12,7 @@
         <!-- Styles -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Langar&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{asset('css/style.css')}}">
        <style>
            body,HTML{
 
@@ -20,6 +21,9 @@
 
                font-family: 'Langar', cursive;
 
+           }
+           img{
+               align-content: center;
            }
        </style>
 
@@ -46,9 +50,11 @@
             @endif
         </div>
              <div>
-                 <h2 class="d-flex justify-content-center ">Bienvenidos</h2>
+                 <h1 class="text-center">Bienvenidos</h1>
              </div>
-            <img src="{{asset('img/portada.svg')}}" alt="">
+            <div class="d-flex justify-content-center">
+                <img src="{{asset('img/portada.svg')}}" alt="" width="800" height="800">
 
+            </div>
     </body>
 </html>

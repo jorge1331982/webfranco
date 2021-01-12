@@ -46,6 +46,6 @@ class RegistroComponent extends Component
 
         ]);
         $this->reset(['cotizacion','fecha','id_cliente','empresa','contacto','telefono1','tipo_unidad','correo','medio','asesor','tipo_servicio','productos']);
-        session()->flash('message', 'Datos Guardados Correctamente.');
+        session()->flash('message', 'ok');
     }
 }

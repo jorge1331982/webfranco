@@ -243,13 +243,7 @@ return [
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
-        [
-            'text'        => 'Graficos',
-            'url'         => '/dash',
-            'icon'        => 'fas fa-chart-line',
-            'label'       => 'graficos',
-            'label_color' => 'warning',
-        ],
+        ['header' => 'VENTAS'],
         [
             'text'        => 'Contacto',
             'url'         => '/site',
@@ -294,13 +288,35 @@ return [
 
 
         ['header' => 'ALMACEN'],
+        [
+            'text'        => ' Inventario',
+            'url'         => '/inventario',
+            'icon'        => 'fas fa-box-open',
+            'label'       => 'almacen',
+            'label_color' => 'success',
+        ],
 
         [
-            'text'        => ' Almacen',
+            'text'        => ' Almacen-salidas',
             'url'         => '/almacen',
             'icon'        => 'fas fa-box-open',
             'label'       => 'almacen',
             'label_color' => 'success',
+        ],
+        [
+            'text'        => ' Entradas',
+            'url'         => '/entradas',
+            'icon'        => 'fas fa-boxes',
+            'label'       => 'almacen',
+            'label_color' => 'success',
+        ],
+        ['header' => 'ADMINISTRACION'],
+        [
+            'text'        => ' Compras',
+            'url'         => '/compras',
+            'icon'        => 'fas fa-store',
+            'label'       => 'admin',
+            'label_color' => 'warning',
         ],
         ['header' => 'NOTIFICACIONES'],
 
@@ -320,6 +336,14 @@ return [
             'icon'        => 'fas fa-users',
             'label'       => 'Users',
             'label_color' => 'primary',
+
+        ],
+        [
+            'text'        => 'Graficos',
+            'url'         => '/dash',
+            'icon'        => 'fas fa-chart-line',
+            'label'       => 'graficos',
+            'label_color' => 'warning',
         ],
 
 
@@ -419,7 +443,7 @@ return [
             ],
         ],
         'Pace' => [
-            'active' => true,
+            'active' => false,
             'files' => [
                 [
                     'type' => 'css',

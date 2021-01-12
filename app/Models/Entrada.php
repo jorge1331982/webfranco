@@ -5,8 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Almacen extends Model
+class Entrada extends Model
 {
     use HasFactory;
-    protected $fillable=['fecha','sku','categoria','cantidad','medida','venta_id','inventario_id'];
+    protected $fillable=['fecha','provedor','cantida','comenta','inventario_id','compra_id'];
 }

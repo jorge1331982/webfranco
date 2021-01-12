@@ -18,11 +18,13 @@ class CreateAlmacensTable extends Migration
             $table->date('fecha');
             $table->string('sku');
             $table->string('categoria');
-            $table->string('nombreP');
             $table->integer('cantidad');
             $table->string('medida');
             $table->unsignedBigInteger('venta_id'); // Relación con productos
             $table->foreign('venta_id')->references('id')->on('ventas');
+
+            $table->unsignedBigInteger('inventario_id')->nullable(); // Relación con productos
+            $table->foreign('inventario_id')->references('id')->on('inventarios');
             $table->timestamps();
         });
     }

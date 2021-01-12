@@ -23,7 +23,7 @@ class VentaController extends Controller
         $post=Venta::create($data);
 
         event(new VentaEvent($post));
-        return redirect()->back()->with('message','GOOD SUCCESS');
+        return redirect()->back()->with('message','Datos Guardados ok !!!');
 
     }
 

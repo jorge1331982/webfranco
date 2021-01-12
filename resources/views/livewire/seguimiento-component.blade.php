@@ -1,23 +1,25 @@
 <div>
-<div class="container">
-<form wire:submit.prevent="submi">
 
-@if(session('message')=='Datos Guardados Correctamente')
-     <script>
-       Swal.fire({
-      icon: 'success',
-      title: '!!Exito!!',
-      text: 'Datos Guardados Correctamente',
+    @if (session('message')=='ok'){
+        <script>
+           Swal.fire({
+           position: 'top-end',
+           icon: 'info',
+           title: 'Datos Guardados Correctamente !!!',
+           showConfirmButton: false,
+           timer: 2000
+             })
+        </script>
+    }
 
-     });
-     </script>
-  @endif
-
-
-
+    @endif
 
 
 
+
+
+  <div class="container">
+    <form wire:submit.prevent="submi" class="formulario-seguimiento">
 
   <div class="form-row">
   <div class="form-group col-md-6">
@@ -40,6 +42,7 @@
         <option>Juan Carlos Villicaña</option>
         <option>Monserrat Villicaña</option>
         <option>Miguel Franco</option>
+        <option>Monserrath Mohedano</option>
       </select>
     </div>
 

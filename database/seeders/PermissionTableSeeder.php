@@ -35,7 +35,16 @@ class PermissionTableSeeder extends Seeder
         Permission::create(['name'=>'user.read']);
         Permission::create(['name'=>'user.update']);
 
+        Permission::create(['name'=>'compras.index']);
+        Permission::create(['name'=>'compras.create']);
+        Permission::create(['name'=>'compras.read']);
+        Permission::create(['name'=>'compras.update']);
 
+        $role=Role::create(['name'=>'oficinas']);
+        $role->givePermissionTo('compras.index');
+        $role->givePermissionTo('compras.create');
+        $role->givePermissionTo('compras.read');
+        $role->givePermissionTo('compras.update');
 
 
         $role=Role::create(['name'=>'asesor']);
@@ -58,6 +67,10 @@ class PermissionTableSeeder extends Seeder
         $role->givePermissionTo('almacen.create');
         $role->givePermissionTo('almacen.read');
         $role->givePermissionTo('almacen.update');
+        $role->givePermissionTo('compras.index');
+        $role->givePermissionTo('compras.create');
+        $role->givePermissionTo('compras.read');
+        $role->givePermissionTo('compras.update');
 
 
 

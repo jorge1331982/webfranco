@@ -38,6 +38,6 @@ class SeguimientoComponent extends Component
 
           ]);
           $this->reset(['fech','status','comentarios','aseso','registro_id']);
-          session()->flash('message', 'Datos Guardados Correctamente.');
+          session()->flash('message', 'ok');
     }
 }

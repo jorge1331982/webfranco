@@ -51,6 +51,6 @@ class ProduccionComponent extends Component
 
         ]);
         $this->reset(['fechaP','folio','tipo_unidad','marca','modelo','year','serie','tipo_trabajo','serie_caja','venta_id']);
-        session()->flash('message', 'Datos Guardados Correctamente.');
+        session()->flash('message', 'ok');
     }
 }

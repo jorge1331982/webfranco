@@ -34,7 +34,7 @@
         <span class="ml-3 pull-right text-muted text-sm">{{ $notification->created_at->diffForHumans() }}</span>
       </a>
       @empty
-        <span class="ml-3 pull-right text-muted text-sm">Sin notificaciones leidas                      </span>
+        <span class="ml-3 pull-right text-muted text-sm">Sin notificaciones leidas</span>
       @endforelse
 
 
@@ -51,12 +51,13 @@
 
 @section('content')
 
-<h1 class="text-center text-orange font-weight-bold mb-5 display-4 fst-italic" id="titulo">REGISTRO PRODUCTOS ALMACEN</h1>
-<!--scripts -->
+<h1 class="text-center text-orange font-weight-bold mb-5 display-4 fst-italic" id="titulo">SALIDA PRODUCTOS ALMACEN</h1>
 
 
- <livewire:scripts>
- @livewire('almacen-component')
+<livewire:scripts>
+@livewire('almacen-component')
+
+
 
 
 
@@ -65,72 +66,26 @@
 @stop
 
 @section('css')
-   <link href="https://cdn.datatables.net/buttons/1.6.4/css/buttons.dataTables.min.css">
-   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Langar&display=swap" rel="stylesheet">
+
+   <style>
+       h1,body{
+        font-family: 'Langar', cursive;
+       }
+   </style>
+
 
 
 
 @stop
 
 @section('js')
-<script>
-    $('.formulario555000').submit(function(e){
-       e.preventDefault();
-       Swal.fire({
-     icon: 'success',
-     title: 'Good.....',
-     text: 'Dato Guardado Correctamente',
-     footer: 'App Webb Franco'
-})
-    });
 
-  </script>
   <script>
-    $(document).ready(function() {
-    $('#derek').DataTable( {
-        responsive: true,
-        dom: 'lBftipr',
-        buttons: [
-            {
-              extend:'excelHtml5',
-              text:'<i class="fas fa-file-excel"></i>',
-              className:"btn btn-success",
-              titleAttr:' exportar a excel'
-            },
-            {
-              extend:'pdfHtml5',
-              text:'<i class="fas fa-file-pdf"></i>',
-              className:"btn btn-danger",
-              titleAttr:' exportar a pdf'
-            },
-            {
-              extend:'print',
-              text:'<i class="fas fa-print"></i>',
-              className:"btn btn-info",
-              titleAttr:'imprimir',
-            },
-            {
-              extend:'csv',
-              text:'<i class="fas fa-file-excel"></i>',
-              className:"btn btn-primary",
-              titleAttr:'exportar a csv',
-            }
-
-        ]
-    } );
-} );
-
-
- </script>
-
-   <script src="https://cdn.datatables.net/buttons/1.6.4/js/dataTables.buttons.min.js"></script>
-   <script src="https://cdn.datatables.net/buttons/1.6.4/js/buttons.flash.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
-   <script src="https://cdn.datatables.net/buttons/1.6.4/js/buttons.html5.min.js"></script>
-   <script src="https://cdn.datatables.net/buttons/1.6.4/js/buttons.print.min.js"></script>
-
+      $('#derek').DataTable();
+  </script>
 
 
 

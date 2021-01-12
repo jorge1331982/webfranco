@@ -10,11 +10,17 @@
 @section('content')
 
 
- <h1 class="text-center text-green font-weight-bold mb-4 display-4">REGISTRO VENTAS</h1>
+ <h1 class="text-center text-green font-weight-bold mb-4 display-4">REGISTRO VENTA</h1>
 
 
  <div class="container">
-
+    @if ( session('message') )
+       <div class="alert alert-success">{{ session('message') }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+    </div>
+   @endif
 
  <form  method="POST">
      @csrf
@@ -51,12 +57,7 @@
   </div>
 
   <div class="form-group col-md-6">
-     <select name="tipo_unidad" class="form-control" required>
-       <option selected>Tipo Unidad</option>
-       <option>3.5 tons</option>
-       <option>1.5 tons</option>
-       <option>Camion</option>
-     </select>
+    <input type="text" name="tipo_unidad" placeholder="Tipo de Unidad" required class="form-control">
    </div>
    <div class="form-group col-md-6">
      <input type="text" class="form-control" placeholder="Nombre del Asesor" name="vendedor" required>
@@ -68,13 +69,15 @@
 
   </div>
 
-
-
-
    <div class="form-group col-md-12">
      <input type="text" class="form-control" placeholder="Comentarios" name="comentarios" required>
 
    </div>
+   <div class="form-group col-md-12">
+       <label for="fecg">Fecha Prevista de Entrega</label>
+    <input type="date" class="form-control" placeholder="Fecha Prevista De Entrega" name="fechaentrega" required id="fecg">
+
+  </div>
 
 
   </div>
@@ -105,20 +108,11 @@
         <th scope="row">{{$f->fecha}}</th>
         <th scope="row">{{$f->Oservicio}}</th>
         <th scope="row">{{$f->Cliente}}</th>
-        <th scope="row">{{$f->Tipo_producto}}</th>
+        <th scope="row">{{$f->Tipo_Producto}}</th>
         <th scope="row">{{$f->tipo_servicio}}</th>
         <th scope="row">{{$f->tipo_unidad}}</th>
         <th scope="row">{{$f->vendedor}}</th>
         <th scope="row">${{$f->precio}}</th>
-
-
-
-
-
-
-
-
-
       </tr>
       @endforeach
     </tbody>
@@ -130,24 +124,25 @@
 @stop
 
 @section('css')
+<link href="https://cdn.datatables.net/buttons/1.6.4/css/buttons.dataTables.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Langar&display=swap" rel="stylesheet">
 
+
+
+
+<style>
+
+    h1,body{
+     font-family: 'Langar', cursive;
+    }
+</style>
 
 @stop
 
 @section('js')
 
-    <script>
-    $('.formulario4567').submit(function(e){
-       e.preventDefault();
-       Swal.fire({
-     icon: 'success',
-     title: 'Good.....',
-     text: 'Dato Guardado Correctamente',
-     footer: 'App Webb Franco'
-})
-    });
-
-  </script>
 
 
 

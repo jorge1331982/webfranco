@@ -22,7 +22,8 @@ class CreateVentasTable extends Migration
             $table->string('tipo_servicio');
             $table->string('tipo_unidad');
             $table->string('vendedor');
-            $table->integer('precio');
+            $table->float('precio');
+            $table->date('fechaentrega');
             $table->string('comentarios');
             $table->unsignedBigInteger('user_id')->constrained(); // Relación con productos
             $table->foreign('user_id')->references('id')->on('users');
