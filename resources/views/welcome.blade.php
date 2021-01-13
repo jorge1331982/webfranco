@@ -50,10 +50,19 @@
             @endif
         </div>
              <div>
-                 <h1 class="text-center">Bienvenidos</h1>
+                 <h1 class="text-center" id="title">Carrocerias Franco</h1>
              </div>
             <div class="d-flex justify-content-center">
-                <img src="{{asset('img/portada.svg')}}" alt="" width="800" height="800">
+                <img src="{{asset('img/portada.svg')}}" alt="" width="800" height="800" id="img">
+                <script src = "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js" > </script>
+
+<script>
+    gsap.from("#title", {duration: 3, x: 300, opacity: 0, scale: 0.5,background:'green'});
+
+
+
+     gsap.to("#img", {duration: 3, rotationX: 360,delay:2});
+    </script>
 
             </div>
     </body>
