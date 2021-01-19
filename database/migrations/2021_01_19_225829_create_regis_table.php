@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRegistersTable extends Migration
+class CreateRegisTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,18 +13,18 @@ class CreateRegistersTable extends Migration
      */
     public function up()
     {
-        Schema::create('registers', function (Blueprint $table) {
+        Schema::create('regis', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->date('fechaB');
+            $table->date('fechaA');
             $table->string('asesor');
-            $table->string('OrdenP');
-            $table->string('factura');
-            $table->string('metodoP');
+            $table->string('ordenP');
             $table->string('formaP');
-            $table->string('cfdi');
-            $table->string('precioN');
-            $table->string('producto');
-            $table->unsignedBigInteger('dato_id'); // Relación con productos
+            $table->string('metodoP');
+            $table->integer('precioN');
+            $table->string('serieU');
+            $table->string('serieC');
+            $table->string('facturaR');
+            $table->unsignedBigInteger('dato_id')->nullable(); // Relación con productos
             $table->foreign('dato_id')->references('id')->on('datos');
             $table->timestamps();
         });
@@ -37,6 +37,6 @@ class CreateRegistersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('registers');
+        Schema::dropIfExists('regis');
     }
 }

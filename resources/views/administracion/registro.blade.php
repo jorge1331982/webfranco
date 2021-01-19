@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'admin')
+@section('title', 'administracion')
 
 
 @section('content_header')
@@ -13,83 +13,11 @@
 
 @section('content')
 
+<h1 class="text-center text-orange font-weight-bold mb-5 display-4 fst-italic" id="titulo">REGISTRO  ADMINISTRACION</h1>
 
 
-<h1 class="text-center text-orange font-weight-bold mb-5 display-4 fst-italic" id="titulo">REGISTRO ADMINISTRACION</h1>
-
-
-
-
-
-    <button type="button" class="btn btn-primary mb-5" data-toggle="modal" data-target="#exampleModal">
-        Registro Clientes Datos
-      </button>
-
-      <!-- Modal -->
-      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title text-dark" id="exampleModalLabel">Registro Cliente</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-                <form method="POST" action="{{route('register')}}" >
-                    @csrf
-                    <div class="row">
-                        <div class="form-group col-md-6">
-                           <input type="date" placeholder="ingrese Fecha" name="fechaA" required class="form-control">
-                        </div>
-                        <div class="form-group col-md-6">
-                         <input type="text" placeholder="Nombre Cliente" name="nombreC" required class="form-control">
-                      </div>
-                        <div class="form-group col-md-6">
-                         <input type="mail" placeholder="Correo Cliente" name="correo" required class="form-control">
-                      </div>
-                      <div class="form-group col-md-6">
-                         <input type="text" placeholder="Telefono" name="telefono" required class="form-control">
-                      </div>
-                      <div class="form-group col-md-12">
-                         <input type="text" placeholder="Razon Social" name="razonsocial" required class="form-control">
-                      </div>
-                      <div class="form-group col-md-12">
-                         <input type="text" placeholder="Direccion Cliente (calle)" name="calle" required class="form-control">
-                      </div>
-                      <div class="form-group col-md-4">
-                         <input type="text" placeholder="Num interior y Exterior" name="numero" required class="form-control">
-                      </div>
-                      <div class="form-group col-md-4">
-                         <input type="text" placeholder="Colonia" name="colonia" required class="form-control">
-                      </div>
-                      <div class="form-group col-md-4">
-                         <input type="text" placeholder="Delegacion Mpio" name="mpio" required class="form-control">
-                      </div>
-                      <div class="form-group col-md-6">
-                         <input type="text" placeholder="Estado" name="estado" required class="form-control">
-                      </div>
-                      <div class="form-group col-md-6">
-                         <input type="text" placeholder="Codigo Postal" name="codigop" required class="form-control">
-                      </div>
-                    </div>
-                    <div  class="d-flex justify-content-center">
-                     <button class="btn btn-primary btn-block mt-2 mb-5 " type="submit"><svg  id="Capa_1" enable-background="new 0 0 512 512" height="30" viewBox="0 0 512 512" width="30" xmlns="http://www.w3.org/2000/svg"><g><path d="m256 0c-140.7 0-256 115.3-256 256s115.3 256 256 256 256-115.3 256-256-115.3-256-256-256z" fill="#f3f5f9"/><path d="m512 256c0 140.7-115.3 256-256 256v-512c140.7 0 256 115.3 256 256z" fill="#e1e6f0"/><circle cx="256" cy="256" fill="#a0e65c" r="226"/><path d="m482 256c0 124.2-101.8 226-226 226v-452c124.2 0 226 101.8 226 226z" fill="#79cc52"/><path d="m372.675 196.747-42.437-42.422c-5.859-5.859-15.352-5.859-21.211 0l-53.027 53.037-30 30.005-23.042-23.042c-5.859-5.859-15.352-5.859-21.211 0l-42.422 42.422c-5.859 5.859-5.859 15.352 0 21.211l76.069 76.069c2.93 2.93 6.768 4.395 10.605 4.395s7.676-1.465 10.605-4.395l19.396-19.394 116.675-116.675c2.813-2.813 4.395-6.621 4.395-10.605s-1.583-7.793-4.395-10.606z" fill="#f3f5f9"/><path d="m377.069 207.353c0-3.984-1.582-7.793-4.395-10.605l-42.437-42.422c-5.859-5.859-15.352-5.859-21.211 0l-53.026 53.036v127.271l116.675-116.675c2.812-2.812 4.394-6.621 4.394-10.605z" fill="#e1e6f0"/></g></svg>Guardar</button>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="submit" class="btn btn-primary">Save changes</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-<div class="container">
- <livewire:scripts>
- @livewire('datoscliente-component')
-</div>
+<livewire:scripts>
+@livewire('pago-component')
 
 
 
@@ -117,7 +45,9 @@
 
 @section('js')
 
-
+  <script>
+      $('#comp').DataTable();
+  </script>
 
 
 

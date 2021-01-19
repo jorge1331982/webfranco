@@ -5,12 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Dato extends Model
+class Regi extends Model
 {
     use HasFactory;
-    protected $fillable=['nombreC','correo','telefono','calle','num','colonia','mpio','estado','ciudad','razonsocial'];
-    public function regis(){
-        return $this->hasMany(Regi::class);
+    protected $fillable=['fechaA','asesor','ordenP','formaP','metodoP','precioN','serieU','serieC','dato_id','facturaR'];
+    public function dato(){
+        return $this->belongsTo(Dato::class);
     }
     public function pagos(){
         return $this->hasMany(Pago::class);

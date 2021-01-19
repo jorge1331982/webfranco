@@ -15,16 +15,16 @@ class CreateDatosTable extends Migration
     {
         Schema::create('datos', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->date('fechaA');
             $table->string('nombreC');
             $table->string('correo');
             $table->string('telefono');
             $table->string('calle');
-            $table->string('numero');
+            $table->string('num');
             $table->string('colonia');
             $table->string('mpio');
             $table->string('estado');
-            $table->string('codigop');
+            $table->string('ciudad');
+            $table->string('codigoP');
             $table->string('razonsocial');
 
             $table->timestamps();

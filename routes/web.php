@@ -99,13 +99,13 @@ Route::get('/compras', function () {
 })->name('entradas')->middleware('permission:compras.index');
 
 //controlador registro datos administracion
-Route::get('/datos', function () {
-    return view('administracion.registre');
+
+
+//pagos admin
+Route::get('/cash', function () {
+    return view('administracion.pago');
 })->name('reg')->middleware('permission:compras.index');
 
-
-Route::get('/dato',[AdminController::class,'ser'])->name('regis');
-Route::post('/dato',[AdminController::class,'regi'])->name('register');
 
 
 
