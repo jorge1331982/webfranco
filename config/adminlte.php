@@ -318,6 +318,13 @@ return [
             'label'       => 'admin',
             'label_color' => 'warning',
         ],
+        [
+            'text'        => ' Registro',
+            'url'         => '/dato',
+            'icon'        => 'fas fa-store',
+            'label'       => 'admin',
+            'label_color' => 'warning',
+        ],
         ['header' => 'NOTIFICACIONES'],
 
         [

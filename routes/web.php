@@ -49,7 +49,7 @@ Route::get('/seguimiento', function () {
 //rutas de venta con controlador
 Route::get('/notifica',[VentaController::class,'ref'])->name('ref')->middleware('permission:venta.index');
 Route::post('/notifica',[VentaController::class,'end'])->name('end')->middleware('permission:venta.create');
-//ruta de 1.5 tons
+//ruta de cotizaciones
  Route::get('/cotizacion',[ AdminController::class,'cotizacion'])->name('cotiza');
  Route::post('/cotizacion',[ AdminController::class,'cotizaform'])->name('salida');
  Route::get('/cotizaci/{id}',[ AdminController::class, 'detalle'])->name('detalle');
@@ -90,10 +90,23 @@ Route::get('/entradas', function () {
     return view('almacen.entradas');
 })->name('entradas')->middleware('permission:almacen.index');
 
-//compras
+
+
+
+//compras administracion
 Route::get('/compras', function () {
     return view('administracion.compras');
 })->name('entradas')->middleware('permission:compras.index');
+
+//controlador registro datos administracion
+Route::get('/datos', function () {
+    return view('administracion.registre');
+})->name('reg')->middleware('permission:compras.index');
+
+
+Route::get('/dato',[AdminController::class,'ser'])->name('regis');
+Route::post('/dato',[AdminController::class,'regi'])->name('register');
+
 
 
 //ruta de la tarjeta de notificaciones

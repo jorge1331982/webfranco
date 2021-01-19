@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 
 use App\Models\Cotizacon;
+use App\Models\Dato;
 use App\Models\Registro;
 use App\Models\Seguimiento;
 use App\Models\Venta;
@@ -71,6 +72,29 @@ class AdminController extends Controller
         $her=Venta::all();
         $mer = Seguimiento::all();
         return view('grafico',compact('jus','her','mer'));
+    }
+    public function ser(){
+        return view('administracion.registre');
+    }
+
+
+    //controlador registro modal clientes administracion
+    public function regi(Request $request){
+        $request->validate([
+            'fechaA'=>'required',
+            'nombreC'=>'required',
+            'correo'=>'required',
+            'telefono'=>'required',
+            'calle'=>'required',
+            'numero'=>'required',
+            'colonia'=>'required',
+            'mpio'=>'required',
+            'estado'=>'required',
+            'codigop'=>'required',
+            'razonsocial'=>'required',
+        ]);
+        $reg=Dato::create($request->all());
+        return redirect()->route('regis',$reg)->with('mensaje','Dato Guardado Correctamente!!');
     }
 
 

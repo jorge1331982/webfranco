@@ -19,7 +19,7 @@
 @section('content')
 
          <div class="container">
-        <h1 class="text-center text-white mb-3 display-5">COTIZACION CAJA SECAS</h1>
+        <h1 class="text-center text-orange mb-5 display-5">COTIZACION CAJA SECAS</h1>
        <!--formulario-->
        @if ( session('mensaje') )
        <div class="alert alert-success">{{ session('mensaje') }}
@@ -116,7 +116,7 @@
                 <input type="text" class="form-control" id="puerta"  name="accesorios" required>
               </div>
 
-              <div class="form-group col-md-4">
+              <div class="form-group col-md-12">
                 <label for="inputPassword4889">Precio (solo numero)</label>
                 <input type="Number" class="form-control" id="inputPassword4889"  name="precio" required>
               </div>
@@ -179,7 +179,14 @@
 @stop
 
 @section('css')
+<link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Langar&display=swap" rel="stylesheet">
 
+   <style>
+       h1,body{
+        font-family: 'Langar', cursive;
+       }
+   </style>
 
 
 @stop
