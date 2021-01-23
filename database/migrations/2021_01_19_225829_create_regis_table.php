@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use phpDocumentor\Reflection\Types\Nullable;
 
 class CreateRegisTable extends Migration
 {
@@ -20,11 +21,12 @@ class CreateRegisTable extends Migration
             $table->string('ordenP');
             $table->string('formaP');
             $table->string('metodoP');
+            $table->string('productophp artisan migrate');
             $table->integer('precioN');
-            $table->string('serieU');
-            $table->string('serieC');
+            $table->string('serieU')->nullable();
+            $table->string('serieC')->nullable();
             $table->string('facturaR');
-            $table->unsignedBigInteger('dato_id')->nullable(); // Relación con productos
+            $table->unsignedBigInteger('dato_id'); // Relación con productos
             $table->foreign('dato_id')->references('id')->on('datos');
             $table->timestamps();
         });

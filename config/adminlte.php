@@ -319,8 +319,8 @@ return [
             'label_color' => 'warning',
         ],
         [
-            'text'        => ' Registro',
-            'url'         => '/dato',
+            'text'        => ' Registro-Cliente',
+            'url'         => '/dat',
             'icon'        => 'fas fa-store',
             'label'       => 'admin',
             'label_color' => 'warning',

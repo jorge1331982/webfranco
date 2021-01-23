@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Dato extends Model
 {
     use HasFactory;
-    protected $fillable=['nombreC','correo','telefono','calle','num','colonia','mpio','estado','ciudad','razonsocial'];
+    protected $fillable=['nombreC','correo','telefono','calle','num','colonia','mpio','estado','ciudad','razonsocial','codigoP'];
     public function regis(){
         return $this->hasMany(Regi::class);
     }

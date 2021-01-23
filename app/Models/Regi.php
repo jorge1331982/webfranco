@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Regi extends Model
 {
     use HasFactory;
-    protected $fillable=['fechaA','asesor','ordenP','formaP','metodoP','precioN','serieU','serieC','dato_id','facturaR'];
+    protected $fillable=['fechaA','asesor','ordenP','formaP','metodoP','precioN','serieU','serieC','dato_id','facturaR','producto'];
     public function dato(){
         return $this->belongsTo(Dato::class);
     }

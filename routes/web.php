@@ -98,13 +98,24 @@ Route::get('/compras', function () {
     return view('administracion.compras');
 })->name('entradas')->middleware('permission:compras.index');
 
-//controlador registro datos administracion
-
-
 //pagos admin
 Route::get('/cash', function () {
     return view('administracion.pago');
 })->name('reg')->middleware('permission:compras.index');
+
+Route::get('/dat', function () {
+    return view('administracion.registro');
+})->name('reg')->middleware('permission:compras.index');
+
+
+Route::get('/payd',[VentaController::class,'mor'])->name('Rpago')->middleware('permission:compras.index');
+Route::post('/payd',[VentaController::class,'jake'])->name('Rpago2')->middleware('permission:compras.index');
+
+//rutas de abonos administracion
+Route::get('/abo',[VentaController::class,'fro'])->name('abo')->middleware('permission:compras.index');
+Route::post('/abo',[VentaController::class,'dames'])->name('abono')->middleware('permission:compras.index');
+
+
 
 
 
