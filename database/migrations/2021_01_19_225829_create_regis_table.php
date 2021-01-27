@@ -21,7 +21,7 @@ class CreateRegisTable extends Migration
             $table->string('ordenP');
             $table->string('formaP');
             $table->string('metodoP');
-            $table->string('productophp artisan migrate');
+            $table->string('producto');
             $table->integer('precioN');
             $table->string('serieU')->nullable();
             $table->string('serieC')->nullable();

@@ -54,3 +54,4 @@
            </div>
     </form>
 </div>
+@include('livewire.table11')

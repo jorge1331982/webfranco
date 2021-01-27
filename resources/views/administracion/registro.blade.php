@@ -109,7 +109,7 @@
 @section('js')
 
   <script>
-      $('#comp').DataTable();
+      $('#compy').DataTable();
   </script>
 
 

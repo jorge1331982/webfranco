@@ -74,11 +74,12 @@
     <thead class="thead-dark">
         <tr>
             <th>FECHA</th>
+            <th>ORDEN DE PRODUCCION</th>
             <th>CLIENTE</th>
-            <th>pRECIO TOTAL</th>
-            <th>ABONOS</th>
-            <th>FORMA PAGO</th>
-            <th>METODO PAGO</th>
+            <th>PRECIO TOTAL</th>
+            <th>ANTICIPO</th>
+            <th>SALDO RESTANTE</th>
+            <th>PRODUCTO</th>
             <th>ASESOR</th>
         </tr>
     </thead>
@@ -90,9 +91,11 @@
             <td>{{$l->ordenP}}</td>
             <td>{{$l->nombreC}}</td>
             <td>{{$l->precioN}}</td>
-            <td>{{$l->formaP}}</td>
-            <td>{{$l->metodoP}}</td>
+            <td>{{$l->anticipo}}</td>
+            <td>{{$l->anticipo  - $l->precioN}}</td>
+            <td>{{$l->producto}}</td>
             <td>{{$l->asesor}}</td>
+
 
         </tr>
         @endforeach

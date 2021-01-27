@@ -10,7 +10,8 @@ class PagoComponent extends Component
     public $nombreC,$correo,$telefono,$calle,$num,$colonia,$mpio,$estado,$ciudad,$codigoP,$razonsocial;
     public function render()
     {
-        return view('livewire.pago-component');
+        $reg=Dato::all();
+        return view('livewire.pago-component',compact('reg'));
     }
     protected $rules=[
         'nombreC'=>'required',

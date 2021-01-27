@@ -53,7 +53,8 @@
 <h1 class="text-center text-warning font-weight-bold mb-5 display-4 fst-italic" id="titulo">REGISTRO DE  PAGO ADMINISTRACION</h1>
  <div class="container">
     @if ( session('message') )
-    <div class="alert alert-warning">{{ session('message') }}
+
+    <div class="alert alert-success">{{ session('message') }}
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
     </div>
@@ -131,7 +132,7 @@
     <thead class="thead-dark">
         <tr>
             <th>FECHA</th>
-            <th>Orden Produccion</th>
+            <th>ORDEN PRODUCCION</th>
             <th>CLIENTE</th>
             <th>PRECIO NETO</th>
             <th>FORMA PAGO</th>
