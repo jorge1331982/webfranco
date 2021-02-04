@@ -10,32 +10,23 @@
              });
 
         </script>
-
     @endif
-
-    <form wire:submit.prevent="rex">
+    <form wire:submit.prevent="vehicu">
         <div class="row">
-            <div class="form-group col-md-6">
-                <input type="date" placeholder="Ingrese Fecha" wire:model="fechac" required class="form-control">
+            <div class="col-sm-6 form-group">
+                <input type="text" placeholder="Ingrese Vehiculo" wire:model="vehiculo" required class="form-control">
             </div>
-            <div class="form-group col-md-6">
-                <input type="text" placeholder="Ingrese Factura" wire:model="Ocompra" required class="form-control">
+            <div class="col-sm-6 form-group">
+                <input type="text" placeholder="Ingrese Marca del Vehiculo" wire:model="marca" required class="form-control">
             </div>
-            <div class="form-group col-md-12">
-                <input type="text" placeholder="Ingrese Nombre Provedor" wire:model="provedorc" required class="form-control">
+            <div class="col-sm-6 form-group">
+                <input type="text" placeholder="Ingrese Modelo  Vehiculo" wire:model="modelo" required class="form-control">
             </div>
-            <div class="form-group col-md-12">
-                <input type="text" placeholder="Ingrese Nombre Producto" wire:model="nombreM" required class="form-control">
+            <div class="col-sm-6 form-group">
+                <input type="number" placeholder="Ingrese  Año del Vehiculo" wire:model="year" required class="form-control">
             </div>
-            <div class="form-group col-md-6">
-                <input type="number" placeholder="Ingrese Cantidad Producto" wire:model="cantidadM" required class="form-control">
-            </div>
-            <div class="form-group col-md-6">
-                <input type="number" placeholder="Precio Total" wire:model="precio" required class="form-control">
-            </div>
-            <div class="form-group col-md-6">
-                <input type="date" placeholder="Ingrese Cantidad Producto" wire:model="fechaLL" required class="form-control" id="gg">
-                <label for="gg">Ingrese Fecha de Llegada Producto (estimado)</label>
+            <div class="col-sm-12 form-group">
+                <input type="text" placeholder="Ingrese Placas del  Vehiculo" wire:model="placas" required class="form-control">
             </div>
         </div>
         <div  class="d-flex justify-content-center">
@@ -43,4 +34,4 @@
            </div>
     </form>
 </div>
-@include('livewire.table10')
+ @include('livewire.table13')

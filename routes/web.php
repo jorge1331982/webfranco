@@ -44,7 +44,7 @@ Route::get('/site', function () {
 
 Route::get('/seguimiento', function () {
     return view('ventas.seguimiento');
-})->name('seguimiento');
+})->name('seguimiento')->middleware('permission:venta.index');
 
 //rutas de venta con controlador
 Route::get('/notifica',[VentaController::class,'ref'])->name('ref')->middleware('permission:venta.index');
@@ -55,7 +55,9 @@ Route::post('/notifica',[VentaController::class,'end'])->name('end')->middleware
  Route::get('/cotizaci/{id}',[ AdminController::class, 'detalle'])->name('detalle');
 Route::get('/detalle/{id}',[ AdminController::class, 'detallecotizacion'])->name('detalle2');
 
-
+Route::get('/call', function () {
+    return view('ventas.llamadas');
+})->name('llamadas')->middleware('permission:venta.index');
 
 
 
@@ -118,8 +120,6 @@ Route::post('/abo',[VentaController::class,'dames'])->name('abono')->middleware(
 
 
 
-
-
 //ruta de la tarjeta de notificaciones
 Route::get('/MarkasRead', function () {
     auth()->user()->unreadNotifications->MarkasRead();
@@ -130,6 +130,16 @@ Route::get('/MarkasRead', function () {
 Route::get('/leer',[VentaController::class, 'lerrnotificacion'])->name('mensa1');
 Route::post('/mark-as-read',[VentaController::class, 'mensaje'])->name('mensa');
 //rutas almacen
+
+Route::get('/gas', function () {
+    return view('gasolina.registro');
+})->name('gas')->middleware('permission:gasolina.index');
+
+Route::get('/rendi', function () {
+    return view('gasolina.rendimiento');
+})->name('rendi')->middleware('permission:gasolina.index');
+
+//rutas de combustible
 
 
 

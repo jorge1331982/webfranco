@@ -260,6 +260,13 @@ return [
             'label_color' => 'warning',
         ],
         [
+            'text'        => 'LLamadas',
+            'url'         => '/call',
+            'icon'        => 'fas fa-phone',
+            'label'       => 'Reg-llamadas',
+            'label_color' => 'warning',
+        ],
+        [
             'text'        => 'Ventas',
             'url'         => '/notifica',
             'icon'        => 'fas fa-fw fa-money-bill',

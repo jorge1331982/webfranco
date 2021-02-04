@@ -40,6 +40,11 @@ class PermissionTableSeeder extends Seeder
         Permission::create(['name'=>'compras.read']);
         Permission::create(['name'=>'compras.update']);
 
+        Permission::create(['name'=>'gasolina.index']);
+        Permission::create(['name'=>'gasolina.create']);
+        Permission::create(['name'=>'gasolina.read']);
+        Permission::create(['name'=>'gasolina.update']);
+
         $role=Role::create(['name'=>'oficinas']);
         $role->givePermissionTo('compras.index');
         $role->givePermissionTo('compras.create');
@@ -52,6 +57,12 @@ class PermissionTableSeeder extends Seeder
         $role->givePermissionTo('venta.create');
         $role->givePermissionTo('venta.read');
         $role->givePermissionTo('venta.update');
+
+        $role=Role::create(['name'=>'check']);
+        $role->givePermissionTo('gasolina.index');
+        $role->givePermissionTo('gasolina.create');
+        $role->givePermissionTo('gasolina.read');
+        $role->givePermissionTo('gasolina.update');
 
 
         $role=Role::create(['name'=>'admin']);
@@ -71,6 +82,10 @@ class PermissionTableSeeder extends Seeder
         $role->givePermissionTo('compras.create');
         $role->givePermissionTo('compras.read');
         $role->givePermissionTo('compras.update');
+        $role->givePermissionTo('gasolina.index');
+        $role->givePermissionTo('gasolina.create');
+        $role->givePermissionTo('gasolina.read');
+        $role->givePermissionTo('gasolina.update');
 
 
 

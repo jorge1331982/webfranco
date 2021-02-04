@@ -64,6 +64,7 @@
         @csrf
         <div class="row">
             <div class="form-group col-md-6">
+
                 <input type="date" placeholder="fecha de Registro" required class="form-control" name="fechaA">
             </div>
             <div class="form-group col-md-6">
@@ -83,6 +84,7 @@
                     <option>Tarjeta Credito</option>
                     <option>Tarjeta Debito</option>
                     <option>Por Definir</option>
+                    <option>Clip</option>
                 </select>
             </div>
 
@@ -103,11 +105,7 @@
                 <input type="text" placeholder="Serie Caja"  class="form-control" name="serieC">
             </div>
             <div class="form-group col-md-6">
-                <select name="facturaR" class="form-control" required>
-                    <option>Seleccione Factura /Remision</option>
-                    <option>Factura</option>
-                    <option>Remision</option>
-                </select>
+               <input type="text" placeholder="Ingrese Factura /Remision" wire:model="FacturaR" required class="form-control">
             </div>
             <div class="form-group col-md-6">
                 <select name="dato_id" class="form-control" required>

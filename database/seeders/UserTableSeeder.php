@@ -65,5 +65,13 @@ class UserTableSeeder extends Seeder
 
         ]);
          $super->assignRole('oficinas');
+
+         $super=User::create([
+            'name'=>'check',
+            'email'=>'gasolina@gmail.com',
+            'password'=>bcrypt('david133'),
+
+        ]);
+         $super->assignRole('check');
     }
 }
