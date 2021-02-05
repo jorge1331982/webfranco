@@ -292,6 +292,22 @@ return [
             'label'       => 'Revision',
             'label_color' => 'danger',
         ],
+        ['header' => 'REGISTRO COMBUSTIBLE'],
+
+        [
+            'text'        => 'Unidades',
+            'url'         => '/gas',
+            'icon'        => 'fas fa-fw fa-car',
+            'label'       => 'Registro',
+            'label_color' => 'success',
+        ],
+        [
+            'text'        => 'Registro Cargas',
+            'url'         => '/rendi',
+            'icon'        => 'fas fa-gas-pump',
+            'label'       => 'Registro',
+            'label_color' => 'success',
+        ],
 
 
         ['header' => 'ALMACEN'],
@@ -352,13 +368,7 @@ return [
             'label_color' => 'primary',
 
         ],
-        [
-            'text'        => 'Graficos',
-            'url'         => '/dash',
-            'icon'        => 'fas fa-chart-line',
-            'label'       => 'graficos',
-            'label_color' => 'warning',
-        ],
+
 
 
 

@@ -131,6 +131,8 @@ Route::get('/leer',[VentaController::class, 'lerrnotificacion'])->name('mensa1')
 Route::post('/mark-as-read',[VentaController::class, 'mensaje'])->name('mensa');
 //rutas almacen
 
+
+//rutas de combustible alchichica
 Route::get('/gas', function () {
     return view('gasolina.registro');
 })->name('gas')->middleware('permission:gasolina.index');
@@ -139,8 +141,14 @@ Route::get('/rendi', function () {
     return view('gasolina.rendimiento');
 })->name('rendi')->middleware('permission:gasolina.index');
 
-//rutas de combustible
+///rutas alchichica
+Route::get('/servi', function () {
+    return view('alchichica.registro');
+})->name('alchichica');
 
+Route::get('/seto', function () {
+    return view('alchichica.consecutivo');
+})->name('alchichica');
 
 
 

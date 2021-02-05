@@ -20,9 +20,10 @@ class CreateRendimientosTable extends Migration
             $table->integer('kminicial');
             $table->integer('kmfinal');
             $table->integer('kilometraje')->nullable();
-            $table->integer('costogas')->nullable();
-            $table->integer('gasto');
-            $table->unsignedBigInteger('gasolina_id')->nullable(); // Relación con productos
+            $table->integer('litros');
+            $table->decimal('costogas');
+            $table->decimal('gasto')->nullable();
+            $table->unsignedBigInteger('gasolina_id'); // Relación con productos
             $table->foreign('gasolina_id')->references('id')->on('gasolinas')->onDelete('cascade');
             $table->timestamps();
         });

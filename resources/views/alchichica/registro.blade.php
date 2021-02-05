@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Site-Gasolina')
+@section('title', 'Site-Alchichica')
 
 
 @section('content_header')
@@ -14,12 +14,12 @@
 
 @section('content')
 
-<h1 class="text-center text-orange font-weight-bold mb-5 display-4 fst-italic" id="titulo" style=color:rgb(243, 184, 75)>REGISTRO VEHICULOS</h1>
+<h1 class="text-center font-weight-bold mb-5 display-4 fst-italic" id="titulo" style="color:rgb(98, 252, 201)">REGISTRO UNIDADES PRODUCCION</h1>
 
 
 <livewire:scripts>
-@livewire('gasolina-component')
-
+@livewire('control-component')
+@livewireStyles
 
 
 
@@ -47,7 +47,7 @@
 @section('js')
 
   <script>
-      $('#gas').DataTable();
+      $('#feder').DataTable();
   </script>
 
 
