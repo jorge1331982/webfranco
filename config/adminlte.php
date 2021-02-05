@@ -348,6 +348,40 @@ return [
             'label'       => 'admin',
             'label_color' => 'warning',
         ],
+        ['header' => 'Alchichica'],
+
+        [
+            'text'        => 'Unidades Registro',
+            'url'         => '/servi',
+            'icon'        => 'fas fa-users',
+            'label'       => 'Unidades',
+            'label_color' => 'danger',
+
+        ],
+        [
+            'text'        => 'Registro Control',
+            'url'         => '/seto',
+            'icon'        => 'fas fa-users',
+            'label'       => 'Registro control',
+            'label_color' => 'danger',
+
+        ],
+        [
+            'text'        => 'Unidades Combustible',
+            'url'         => '/gas',
+            'icon'        => 'fas fa-fw fa-car',
+            'label'       => 'Registro',
+            'label_color' => 'danger',
+        ],
+        [
+            'text'        => 'Registro Cargas Combustible',
+            'url'         => '/rendi',
+            'icon'        => 'fas fa-gas-pump',
+            'label'       => 'Registro',
+            'label_color' => 'danger',
+        ],
+
+
         ['header' => 'NOTIFICACIONES'],
 
         [
