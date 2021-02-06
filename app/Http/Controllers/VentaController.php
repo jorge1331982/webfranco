@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Events\VentaEvent;
+use App\Models\Control;
 use App\Models\Dato;
 use App\Models\Pago;
 use App\Models\Regi;
+use App\Models\Registo;
 use App\Models\Salida;
 use App\Models\User;
 use App\Models\Venta;
@@ -96,6 +98,14 @@ class VentaController extends Controller
         $mart=Pago::create($request->all());
         return redirect()->back()->with('message','Datos Guardados Correctamente',compact('mart'));
     }
+    public function detalle($id){
+        $rego = Registo::findOrFail($id);
+
+
+        return view('alchichica.detallado', compact('rego'));
+    }
+
+
 
 
 

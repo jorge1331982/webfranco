@@ -150,6 +150,7 @@ Route::get('/seto', function () {
     return view('alchichica.consecutivo');
 })->name('alchichica');
 
+Route::get('/vist/{id}',[VentaController::class, 'detalle'])->name('detallado');
 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {

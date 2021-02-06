@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use App\Models\Control;
 use App\Models\Registo;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 use Livewire\Component;
 
@@ -17,6 +18,7 @@ class SiguienteComponent extends Component
         ->join('controls','controls.id','registos.control_id')
         ->select('*')
         ->get();
+
         return view('livewire.siguiente-component',compact('rex','res'));
     }
     protected $rules=[
